@@ -1,0 +1,5 @@
+################## nvim config json
+.config/nvim/lazy-lock.json
+
+# Private Stuff
+/**/**/private-*

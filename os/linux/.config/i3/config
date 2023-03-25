@@ -192,6 +192,12 @@ exec_always killall polybar &> /dev/null ; ~/.config/polybar/launch.sh
 # set wallpaper
 exec_always --no-startup-id feh --bg-fill  $HOME/Imágenes/lofi.jpg
 
+# allow touchpad tap to click
+exec_always xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Tapping Enabled" 1
+
+# allow touchpad natural scrolling (inverted)
+exec_always xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Natural Scrolling Enabled" 1
+
 # add monitor configuration
 exec --no-startup-id ~/.config/i3/monitor_config.sh
 
@@ -205,8 +211,6 @@ workspace 6 output eDP-1
 workspace 7 output eDP-1
 workspace 8 output DP-2
 workspace 9 output DP-2
-
-
 
 # Assign applications to workspaces
 assign [class="Terminator"] workspace 1

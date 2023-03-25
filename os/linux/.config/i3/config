@@ -181,14 +181,6 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shfit+d exec dbeaver
 
-# initialize polybar
-exec_always killall polybar &> /dev/null ; ~/.config/polybar/launch.sh
-
-# set wallpaper
-exec_always --no-startup-id feh --bg-fill  $HOME/Imágenes/lofi.jpg
-
-# add transparency
-exec_always --no-startup-id compton
 # add specific screen configuration
 exec_always --no-startup-id ~/.config/i3/screen_config.sh
 
@@ -217,9 +209,5 @@ assign [class="DBeaver"] workspace 4
 assign [class="Slack"] workspace 6
 assign [class="spotify"] workspace 7
 
-# Launch applications at startup
-exec --no-startup-id terminator
-exec --no-startup-id google-chrome
-# exec --no-startup-id spotify
-# exec --no-startup-id dbeaver
-
+# initialize polybar
+exec_always killall polybar &> /dev/null ; ~/.config/polybar/launch.sh

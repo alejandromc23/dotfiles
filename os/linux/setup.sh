@@ -48,6 +48,7 @@ echo
 ./installation/install-neovim.sh
 ./installation/install-npm.sh
 ./installation/install-nodejs.sh
+./installation/install-nvm.sh
 ./installation/install-tldr.sh
 ./installation/install-golang.sh
 ./installation/install-spotify.sh

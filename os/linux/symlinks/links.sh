@@ -7,8 +7,9 @@ ln -s "$HOME/.dotfiles/shell/zsh/.zshrc" "$HOME/.zshrc"
 ln -s "$HOME/.dotfiles/shell/zsh/.zshenv" "$HOME/.zshenv" 
 ln -s "$HOME/.dotfiles/shell/zsh/.zimrc" "$HOME/.zimrc"
 
-ln -sf "$HOME/.dotfiles/.config/nvim" "$HOME/.config" 
+ln -s "$HOME/.dotfiles/.config/nvim" "$HOME/.config" 
 
-ln -sf "$HOME/.dotfiles/os/linux/.config/terminator" "$HOME/.config" 
-ln -sf "$HOME/.dotfiles/os/linux/.config/i3" "$HOME/.config" 
-ln -sf "$HOME/.dotfiles/os/linux/.config/polybar" "$HOME/.config" 
+ln -s "$HOME/.dotfiles/os/linux/.config/terminator" "$HOME/.config" 
+ln -s "$HOME/.dotfiles/os/linux/.config/i3" "$HOME/.config" 
+ln -s "$HOME/.dotfiles/os/linux/.config/polybar" "$HOME/.config" 
+ln -s "$HOME/.dotfiles/os/linux/.config/compton.conf" "$HOME/.config/compton.conf"

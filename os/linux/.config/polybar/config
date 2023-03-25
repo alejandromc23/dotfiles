@@ -182,7 +182,7 @@ exec = df -h | awk '/\/$/ {print $4}'
 [module/wifi]
 type = custom/script
 interval = 5
-exec = ~/.dotfiles/bin/get-wifi.sh
+exec = ~/.dotfiles/os/linux/.config/polybar/scripts/get-wifi.sh
 ;format-prefix = "   "
 format-prefix-foreground = ${colors.green}
 
@@ -281,7 +281,7 @@ type = custom/script
 interval = 10
 format-prefix = " "
 format-prefix-foreground = ${colors.cyan}
-exec = ~/.dotfiles/bin/get-song.sh
+exec = ~/.dotfiles/os/linux/.config/polybar/scripts/get-song.sh
 
 [module/docker]
 type = custom/script

@@ -26,6 +26,33 @@ This repository follows a specific folder structure to organize the configuratio
 
 - `shell`: This folder contains configurations for the different shells used in the system (in this case, zsh and bash).
 
+## Setting System Up
+
+To set up the system, there are two ways to proceed:
+
+1. If you already have Git installed, from the root folder of your system, you can clone this repository by running the following command:
+
+```
+git clone git@github.com:alejandromc23/dotfiles.git
+```
+
+Once the repository is cloned, rename the folder to `.dotfiles` and execute the Makefile command that corresponds to your operating system from inside the `.dotfiles` folder. For instance, if you are using Linux, run the following command from the `.dotfiles` folder:
+
+```
+ make setup-linux
+```
+
+This will set up the system according to the configurations defined in this repository for your Linux system.
+
+2. If you do not have Git installed, you can still download this repository using `curl`. To do so, run the following command:
+
+```
+curl -L https://github.com/alejandromc23/dotfiles/archive/refs/heads/main.zip -o dotfiles.zip
+```
+
+This will download a zipped version of the repository and save it as dotfiles.zip. Extract the contents of this zip file to a folder called .dotfiles inside your root directory. Next, execute the Makefile command that corresponds to your operating system, as described in the first method.
+
+Please note that using the second method, you cannot use Git to update the repository or switch to different branches or commits. To get the latest version of the repository, you need to download it again using curl.
 
 ## Credits
 

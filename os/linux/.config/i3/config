@@ -193,10 +193,10 @@ exec_always --no-startup-id compton
 exec_always --no-startup-id ~/.config/i3/screen_config.sh
 
 # allow touchpad tap to click
-xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Tapping Enabled" 1
+exec xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Tapping Enabled" 1
 
 # allow touchpad natural scrolling (inverted)
-xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Natural Scrolling Enabled" 1
+exec xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 # Set up workspaces on specific outputs
 workspace 1 output DP-2

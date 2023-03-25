@@ -70,3 +70,6 @@ function bt_toggle {
     fi
 }
 
+function set_monitors {
+  xrandr --output DP-1 --mode 1920x1080 --pos 0x0 --output DP-2 --mode 2560x1080 --pos 1920x0 --primary --output eDP-1 --mode 1920x1080 --pos 4480x0
+}

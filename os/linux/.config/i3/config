@@ -172,34 +172,31 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+default_border pixel 0
+for_window [class="^.*"] border pixel 2
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        mode invisible
-}
+bindsym $mod+r mode "resize"
 
 # Assign keys to applications
 bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shfit+d exec dbeaver
 
-default_border pixel 0
-for_window [class="^.*"] border pixel 2
-
+# initialize polybar
 exec_always killall polybar &> /dev/null ; ~/.config/polybar/launch.sh
 
 # set wallpaper
 exec_always --no-startup-id feh --bg-fill  $HOME/Imágenes/lofi.jpg
 
+# add transparency
+exec_always --no-startup-id compton
+# add specific screen configuration
+exec_always --no-startup-id ~/.config/i3/screen_config.sh
+
 # allow touchpad tap to click
-exec_always xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Tapping Enabled" 1
 
 # allow touchpad natural scrolling (inverted)
-exec_always xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Natural Scrolling Enabled" 1
-
-# add monitor configuration
-exec --no-startup-id ~/.config/i3/monitor_config.sh
+xinput set-prop "CUST0001:00 06CB:76B1 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 # Set up workspaces on specific outputs
 workspace 1 output DP-2
@@ -226,6 +223,3 @@ exec --no-startup-id google-chrome
 # exec --no-startup-id spotify
 # exec --no-startup-id dbeaver
 
-
-# add transparency
-exec --no-startup-id compton

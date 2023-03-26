@@ -26,7 +26,7 @@ really-dark-purple = #565f89
 black = #414868
 really-black = #24283b
 blacker = #1a1b26
-yellow = #e7de79
+yellow = #FFFF00
 
 ; transparent bar workaround
 [bar/bar2]
@@ -215,16 +215,12 @@ format-full-prefix = " "
 format-full-prefix-foreground = ${colors.green}
 format-charging-prefix-foreground = ${colors.yellow}
 
-ramp-capacity-0 = 󰂄
-ramp-capacity-foreground = ${colors.yellow}
-
-animation-charging-0 = " "
-
+animation-charging-0 = "󰂄 "
+animation-discharging-0 = 
 
 animation-charging-foreground = ${colors.green}
-animation-charging-framerate = 750
 
-animation-discharging-0 = 
+animation-charging-framerate = 750
 animation-discharging-framerate = 750
 
 [module/temperature]

@@ -72,7 +72,7 @@ font-3 = "JetBrainsMono Nerd Font:size=10;2"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = music docker alsa memory cpu bluetooth wifi battery date
+modules-right = music docker memory cpu bluetooth pulseaudio wifi battery date
 
 tray-position = none
 tray-padding = 2
@@ -290,6 +290,14 @@ format-prefix-foreground = ${colors.blue}
 type = custom/script
 interval = 10
 exec = ~/.dotfiles/os/linux/.config/polybar/scripts/get-bluetooth.sh
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+interval = 5
+format-volume = 󰕾 <label-volume>
+format-muted = 󰸈 muted
+label-volume = %percentage%%
 
 [settings]
 screenchange-reload = true

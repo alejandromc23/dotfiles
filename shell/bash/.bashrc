@@ -97,3 +97,4 @@ if ! shopt -oq posix; then
 fi
 
 source "$DOTFILES_PATH/shell/init.sh"
+. "$HOME/.cargo/env"

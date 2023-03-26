@@ -59,6 +59,7 @@ echo
 ./installation/install-polybar.sh
 ./installation/install-playerctl.sh
 ./installation/install-nmtui.sh
+./installation/install-rust.sh
 
 echo
 echo "################################################################"

@@ -72,7 +72,7 @@ font-3 = "JetBrainsMono Nerd Font:size=10;2"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = music docker alsa memory cpu wifi battery date
+modules-right = music docker alsa memory cpu bluetooth wifi battery date
 
 tray-position = none
 tray-padding = 2
@@ -289,6 +289,11 @@ exec = echo "$(docker ps -q | wc -l)"
 format-prefix = " 󰡨 " 
 interval = 60
 format-prefix-foreground = ${colors.blue}
+
+[module/bluetooth]
+type = custom/script
+interval = 10
+exec = ~/.dotfiles/os/linux/.config/polybar/scripts/get-bluetooth.sh
 
 [settings]
 screenchange-reload = true

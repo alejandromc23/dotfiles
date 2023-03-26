@@ -41,6 +41,19 @@ function show_open_files {
 
 # function to toggle bluetooth connection state
 function bt_toggle {
+    # Get the current bluetooth connection state
+    state=$(rfkill list bluetooth | awk '/Soft blocked/ {print $3}')
+
+    # Toggle the bluetooth connection state
+    if [[ "$state" =~ ^yes$ ]]; then
+        rfkill unblock bluetooth
+    else
+        rfkill block bluetooth
+    fi
+}
+
+# function to toggle bluetooth device connection state
+function bt_devices {
     # Get a list of paired Bluetooth devices
     devices=$(bluetoothctl paired-devices | grep Device | awk '{print $2}')
 

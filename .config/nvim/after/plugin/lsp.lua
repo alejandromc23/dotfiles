@@ -8,6 +8,7 @@ lsp.ensure_installed({
 	'gopls',
 	'lua_ls',
 	'rust_analyzer',
+	'intelephense',
 })
 
 -- Fix Undefined global 'vim'

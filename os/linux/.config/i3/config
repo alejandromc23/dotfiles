@@ -181,6 +181,12 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shfit+d exec dbeaver
 
+#  Screenshots in files
+bindsym $mod++Shift+p exec --no-startup-id maim --format=png --select "/home/$USER/Downloads/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+
+# Screenshots in clipboards
+bindsym $mod+p exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+
 # add specific screen configuration
 exec_always --no-startup-id ~/.config/i3/screen_config.sh
 

@@ -60,6 +60,7 @@ echo
 ./installation/install-playerctl.sh
 ./installation/install-nmtui.sh
 ./installation/install-rust.sh
+./installation/install-screen-deps.sh
 
 echo
 echo "################################################################"

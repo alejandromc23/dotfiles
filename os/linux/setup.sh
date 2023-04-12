@@ -61,6 +61,7 @@ echo
 ./installation/install-nmtui.sh
 ./installation/install-rust.sh
 ./installation/install-screen-deps.sh
+./installation/install-light.sh
 
 echo
 echo "################################################################"

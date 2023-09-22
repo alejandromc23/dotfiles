@@ -62,6 +62,7 @@ echo
 ./installation/install-rust.sh
 ./installation/install-screen-deps.sh
 ./installation/install-light.sh
+./installation/install-gcloud-cli.sh
 
 echo
 echo "################################################################"

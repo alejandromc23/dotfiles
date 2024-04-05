@@ -98,3 +98,8 @@ function set_monitors {
 
   xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --primary
 }
+
+lang() {
+    echo "Setting keyboard layout to $1"
+    setxkbmap "$1"
+}

@@ -20,4 +20,4 @@ alias gb='git branch'
 alias gco='git checkout '
 
 # open gnome-control-center
-alias cc='gnome-control-center'
+alias gcc='gnome-control-center'

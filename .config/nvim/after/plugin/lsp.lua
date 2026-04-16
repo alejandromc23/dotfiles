@@ -36,7 +36,6 @@ require('mason-lspconfig').setup({
   ensure_installed = {
     'lua_ls', -- Lua Language Server
     'ts_ls', -- TypeScript Language Server
-    'gopls', -- Go Language Server
     'pyright', -- Python Language Server
     'rust_analyzer', -- Rust Language Server
     'clangd', -- C/C++ Language Server

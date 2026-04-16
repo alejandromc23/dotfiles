@@ -43,3 +43,4 @@ source "$DOTFILES_PATH/shell/init.sh"
 source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 
 # zprof
+export GPG_TTY=$(tty)

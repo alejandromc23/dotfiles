@@ -1,7 +1,7 @@
 [user]
 	name = Alejandro Mascort Colomer
 	email = alejandro.mascort17@hotmail.com
-	signingkey = D83E9ED647986506
+	signingkey = 46D2DB3993213123
 
 [fetch]
 	prune = true
@@ -80,4 +80,4 @@
 [tag]
 	gpgsign = true
 [gpg]
-	program = /usr/bin/gpg
+	program = /opt/homebrew/bin/gpg

@@ -1,0 +1,19 @@
+# ============================================================
+# Focus display (monitor)
+# ============================================================
+alt - 1 : yabai -m display --focus 1
+alt - 2 : yabai -m display --focus 2
+alt - 3 : yabai -m display --focus 3
+
+# ============================================================
+# Move window to display (monitor)
+# ============================================================
+shift + alt - 1 : yabai -m window --display 1; yabai -m display --focus 1
+shift + alt - 2 : yabai -m window --display 2; yabai -m display --focus 2
+shift + alt - 3 : yabai -m window --display 3; yabai -m display --focus 3
+
+
+# ============================================================
+# Restart yabai
+# ============================================================
+shift + alt - r : yabai --restart-service

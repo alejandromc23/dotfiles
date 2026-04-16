@@ -1,0 +1,29 @@
+# Taps
+tap "koekeishiya/formulae"
+
+# Shell
+brew "zsh"
+brew "fzf"
+
+# Editor
+brew "neovim"
+brew "tree-sitter"
+
+# Git / signing
+brew "gh"
+brew "gnupg"
+brew "pinentry-mac"
+
+# Node
+brew "nvm"
+brew "node"
+
+# Window management
+brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/skhd"
+
+# Casks
+cask "iterm2"
+cask "rectangle"
+cask "docker-desktop"
+cask "font-hack-nerd-font"

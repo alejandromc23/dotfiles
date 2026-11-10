@@ -44,3 +44,7 @@ source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 
 # zprof
 export GPG_TTY=$(tty)
+export PATH=$PATH:$HOME/.maestro/bin
+
+# Java (required by Maestro)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

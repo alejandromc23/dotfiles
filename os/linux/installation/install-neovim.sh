@@ -8,7 +8,7 @@ echo
 
 if ! [ -x "$(command -v nvim)" ]; then
     mkdir -p ~/.local/bin
-    curl -Lo ~/.local/bin/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage
+    curl -Lo ~/.local/bin/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-linux-x86_64.appimage
     chmod u+x ~/.local/bin/nvim.appimage
     ln -s ~/.local/bin/nvim.appimage ~/.local/bin/nvim
     

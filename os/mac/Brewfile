@@ -7,7 +7,7 @@ brew "fzf"
 
 # Editor
 brew "neovim"
-brew "tree-sitter"
+brew "tree-sitter-cli" # parser builds for nvim-treesitter (main branch)
 
 # Git / signing
 brew "gh"

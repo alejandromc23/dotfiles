@@ -26,6 +26,22 @@ This repository follows a specific folder structure to organize the configuratio
 
 - `shell`: This folder contains configurations for the different shells used in the system (in this case, zsh and bash).
 
+## Neovim
+
+The Neovim config lives in `.config/nvim` and targets **Neovim >= 0.12** (macOS: `brew upgrade neovim`, Linux: `os/linux/installation/install-neovim.sh`).
+
+Layout:
+
+- `init.lua` enables `vim.loader` and requires `lua/alejandromc23/`.
+- `lua/alejandromc23/sets.lua`, `maps.lua`, `autocmds.lua`: options, global keymaps and autocmds (no plugins involved).
+- `lua/alejandromc23/lazy.lua`: bootstraps [lazy.nvim](https://github.com/folke/lazy.nvim) and imports every spec in `lua/alejandromc23/plugins/` (`ui`, `editor`, `git`, `lsp`, `coding`, `ai`).
+- `after/lsp/<server>.lua`: per-server settings using the native `vim.lsp.config` (servers are installed with Mason and enabled with `vim.lsp.enable`).
+- `after/plugin/*.lua`: plugin keymaps only. Plugin options live next to their spec in `plugins/`.
+
+Requirements: `git`, a C compiler and the `tree-sitter` CLI (`brew install tree-sitter-cli`) to build parsers, `make` (telescope-fzf-native, CopilotChat, avante), `node` + `npm` (prettierd, language servers), `ripgrep` (telescope live grep).
+
+Useful commands: `:Lazy` (plugins), `:Mason` (servers/formatters), `:TSInstall <lang>`, `:Format` (format with LSP fallback), `:FormatToggle[!]` (toggle format on save globally / for the buffer), `:ConformInfo`, `:Ex` (oil file explorer).
+
 ## Setting System Up
 
 To set up the system, there are two ways to proceed:

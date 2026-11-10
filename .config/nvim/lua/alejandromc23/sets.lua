@@ -42,22 +42,19 @@ vim.opt.smartindent = true
 --  See `:help 'clipboard'`
 vim.o.clipboard = "unnamedplus"
 
--- Enable cursor line highlighting
+-- Enable cursor line highlighting (only shown in the active window, see autocmds.lua)
 vim.opt.cursorline = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- highlight yanked text for 200ms using the "Visual" highlight group
-vim.cmd [[
-  augroup highlight_yank
-  autocmd!
-  au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
-  augroup END
-]]
-
 -- Set only one status line and not one per window
-vim.opt.laststatus=3
+vim.opt.laststatus = 3
 
 -- Open new vertical splits to the right
 vim.opt.splitright = true
+
+-- Rounded borders for every floating window (LSP hover, diagnostics, pickers...) (Neovim >= 0.11)
+if vim.fn.has("nvim-0.11") == 1 then
+  vim.o.winborder = "rounded"
+end

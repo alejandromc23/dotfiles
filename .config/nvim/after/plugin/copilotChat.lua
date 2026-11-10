@@ -1,9 +1,3 @@
-local copilot_chat = require("CopilotChat")
-
-copilot_chat.setup({
-  window = {
-    position = "right", -- Position of the chat window
-  },
-})
+-- CopilotChat is configured in lua/alejandromc23/plugins/ai.lua
 
 vim.api.nvim_set_keymap("n", "<C-p>", ":CopilotChatToggle<CR>", { noremap = true, silent = true, desc = "Toggle CopilotChat" })
